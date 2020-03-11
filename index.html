@@ -12,27 +12,34 @@
 </html>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <script>
     function successModal(){
             //Title        Message                 Icon
-        swal("Great!", "You pushed the button", "success");
+        swal.fire("Great!", "You pushed the button", "success");
     }
     function infoModal(){
-        swal("Information!", "You opened the alert", "info");
+        swal.fire("Information!", "You opened the alert", "info");
     }
     function warningModal(){
-        swal("Warning!", "Be careful on your next move", "warning");
+        swal.fire("Warning!", "Be careful on your next move", "warning");
     }
     function errorModal(){
-        swal("Error!", "Something went wrong", "error");
+        swal.fire("Error!", "Something went wrong", "error");
     }
 
     //functionName = (parameter1, parameter2, ...) => { action(s) to do }
     const arrowFunction = () => {
-        swal({
+        swal.fire({
             title: "This is a title",
             text: "This is the content",
             icon: "success",
-            buttons: true, //cancel and ok buttons by default
+            showCloseButton:true, //top right corner cross button
+            showCancelButton:true,//cancel button itself
+            focusConfirm: false,
         });}
 </script>
