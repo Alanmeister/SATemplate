@@ -28,5 +28,11 @@
     }
 
     //functionName = (parameter1, parameter2, ...) => { action(s) to do }
-    const arrowFunction = () => {swal("Great!", "Called using arrowFunction", "success");}
+    const arrowFunction = () => {
+        swal({
+            title: "This is a title",
+            text: "This is the content",
+            icon: "success",
+            buttons: true, //cancel and ok buttons by default
+        });}
 </script>
